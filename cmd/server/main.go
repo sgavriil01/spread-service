@@ -14,6 +14,7 @@ func main() {
 	})
 
 	mux.HandleFunc("/symbols", spread.GetSymbolsHandler)
+	mux.HandleFunc("/spreads/", spread.GetSpreadHandler)
 
 	log.Println("server running on :8080")
 
