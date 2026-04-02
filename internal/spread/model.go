@@ -8,6 +8,10 @@ type Spread struct {
 	UpdatedAt time.Time `json:"updated_at"`
 }
 
+type SetSpreadRequest struct {
+	Spread float64 `json:"spread"`
+}
+
 var Symbols = []string{
 	"EURUSD",
 	"EURCAD",
