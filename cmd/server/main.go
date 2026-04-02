@@ -3,6 +3,7 @@ package main
 import (
 	"log"
 	"net/http"
+	"github.com/sgavriil01/spread-service/internal/spread"
 )
 
 func main() {
@@ -11,6 +12,8 @@ func main() {
 	mux.HandleFunc("/health", func(w http.ResponseWriter, r *http.Request) {
 		w.Write([]byte("ok"))
 	})
+
+	mux.HandleFunc("/symbols", spread.GetSymbolsHandler)
 
 	log.Println("server running on :8080")
 
